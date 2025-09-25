@@ -1,5 +1,5 @@
 import { SimpleBuilder } from "./builder";
-export function App() {
+export default function App() {
   return (
     <SimpleBuilder />
   );

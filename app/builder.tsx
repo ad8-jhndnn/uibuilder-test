@@ -7,94 +7,75 @@ import { primitiveComponentDefinitions } from "@/lib/ui-builder/registry/primiti
 
 const initialLayers = [
   {
-    id: "1",
+
+    id: "7",
     type: "div",
-    name: "Page",
+    name: "Panel",
     props: {
-      className: "bg-gray-200 flex flex-col justify-center items-center gap-4 p-2 w-full h-screen",
+      className: "bg-orange-100 p-1 h-dvh",
     },
     children: [
       {
-        id: "2",
+        id: "1",
         type: "div",
-        name: "Box A",
+        name: "Page",
         props: {
-          className: "flex flex-row justify-center items-center bg-red-300 p-2 w-full md:w-1/2 h-1/3 text-center",
+          className: "p-1 grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] h-full gap-2  bg-emerald-200 h-600",
         },
         children: [
           {
-            id: "3",
-            type: "span",
-            name: "Text",
-            props: {
-              className: "text-4xl font-bold text-secondary",
-            },
-            children: "A",
-          }
-        ],
-      },
-      {
-        id: "4",
-        type: "div",
-        name: "Box B",
-        props: {
-          className: "flex flex-row justify-center items-center bg-green-300 p-2 w-full md:w-1/2 h-1/3 text-center",
-        },
-        children: [
-          {
-            id: "5",
-            type: "span",
-            name: "Text",
-            props: {
-              className: "text-4xl font-bold text-secondary",
-            },
-            children: "B",
-          }
-        ],
-      },
-      {
-        id: "6",
-        type: "div",
-        name: "Box C",
-        props: {
-          className: "flex flex-row justify-center items-center bg-blue-300 p-2 w-full md:w-1/2 h-1/3 p-2 w-1/2 h-1/3 text-center",
-        },
-        children: [
-          {
-            id: "8",
+            id: "2",
             type: "div",
-            name: "Inner Box D",
+            name: "Buttons",
             props: {
-              className: "bg-yellow-300 p-2 w-1/2 p-2 w-1/2 h-auto text-center",
+              className: "flex flex-col gap-2 justify-between",
+            },
+            children: [
+
+            ],
+          },
+          {
+            id: "4",
+            type: "div",
+            name: "Content",
+            props: {
+              className: "flex items-center justify-center",
             },
             children: [
               {
-                id: "7",
-                type: "span",
-                name: "Text",
+                id: "5",
+                type: "div",
+                name: "Stuff",
                 props: {
-                  className: "text-4xl font-bold text-secondary-foreground",
+                  className: "flex flex-1 justify-evenly items-center h-7/8  gap-20",
                 },
-                children: "C",
               }
             ],
           },
-          
+          {
+            id: "6",
+            type: "div",
+            name: "Footer",
+            props: {
+              className: "col-span-2 col-start-2 bg-blue-800 row-start-2 content-end text-center",
+            },
+            children: "Copyright Audinate 2025",
+          },
         ],
       },
-    ],
-  },
+    ]
+  }
 ];
 
-export const SimpleBuilder = () => {
-  return (
-    <UIBuilder
-      initialLayers={initialLayers}
-      persistLayerStore={false}
-      componentRegistry={{
-        ...complexComponentDefinitions,
-        ...primitiveComponentDefinitions,
-      }}
-    />
-  );
-}
+    export const SimpleBuilder = () => {
+      return (
+        <UIBuilder
+          initialLayers={initialLayers}
+          persistLayerStore={false}
+          componentRegistry={{
+            ...complexComponentDefinitions,
+            ...primitiveComponentDefinitions,
+          }}
+        />
+      );
+    }

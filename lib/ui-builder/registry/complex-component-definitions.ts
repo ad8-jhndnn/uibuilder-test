@@ -1,6 +1,8 @@
 import { ComponentRegistry } from '@/components/ui/ui-builder/types';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
+
 import { Badge } from '@/components/ui/badge';
 import { Flexbox } from '@/components/ui/ui-builder/components/flexbox';
 import { Grid } from '@/components/ui/ui-builder/components/grid';
@@ -40,6 +42,24 @@ export const complexComponentDefinitions: ComponentRegistry = {
                 props: {},
                 children: "Button",
             } satisfies ComponentLayer,
+        ],
+        fieldOverrides: commonFieldOverrides()
+    },
+        Slider: {
+        component: Slider,
+        schema: z.object({
+            className: z.string().optional(),
+            children: z.any().optional(),
+            asChild: z.boolean().optional(),
+            orientation: z
+                .enum([
+                    "horizontal",
+                    "vertical",
+                ])
+                .default("horizontal"),
+        }),
+        from: "@/components/ui/slider",
+        defaultChildren: [
         ],
         fieldOverrides: commonFieldOverrides()
     },
