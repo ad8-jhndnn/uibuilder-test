@@ -30,9 +30,7 @@ const initialLayers = [
             props: {
               className: "flex flex-col gap-2 justify-between",
             },
-            children: [
-
-            ],
+            children: [],
           },
           {
             id: "4",
@@ -49,6 +47,7 @@ const initialLayers = [
                 props: {
                   className: "flex flex-1 justify-evenly items-center h-7/8  gap-20",
                 },
+                children: []
               }
             ],
           },
@@ -66,6 +65,7 @@ const initialLayers = [
     ]
   }
 ];
+
 
     export const SimpleBuilder = () => {
       return (

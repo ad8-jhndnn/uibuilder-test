@@ -1,4 +1,3 @@
-/* eslint-disable react-perf/jsx-no-new-function-as-prop */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
@@ -448,7 +447,6 @@ const SidebarGroupLabel = React.forwardRef<
 
   return (
     <Comp
-      // @ts-expect-error - Radix UI Slot ref type compatibility issue
       ref={ref}
       data-sidebar="group-label"
       className={cn(
@@ -470,7 +468,6 @@ const SidebarGroupAction = React.forwardRef<
 
   return (
     <Comp
-    // @ts-expect-error - Radix UI Slot ref type compatibility issue
       ref={ref}
       data-sidebar="group-action"
       className={cn(
@@ -572,7 +569,6 @@ const SidebarMenuButton = React.forwardRef<
 
     const button = (
       <Comp
-        // @ts-expect-error - Radix UI Slot ref type compatibility issue
         ref={ref}
         data-sidebar="menu-button"
         data-size={size}
@@ -618,7 +614,6 @@ const SidebarMenuAction = React.forwardRef<
 
   return (
     <Comp
-      // @ts-expect-error - Radix UI Slot ref type compatibility issue
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
@@ -733,7 +728,6 @@ const SidebarMenuSubButton = React.forwardRef<
 
   return (
     <Comp
-      // @ts-expect-error - Radix UI Slot ref type compatibility issue
       ref={ref}
       data-sidebar="menu-sub-button"
       data-size={size}
