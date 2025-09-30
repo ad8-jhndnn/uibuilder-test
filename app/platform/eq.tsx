@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-from- */
 //  eslint-disable @typescript-eslint/no-explicit-any
 
 import {
