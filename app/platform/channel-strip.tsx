@@ -25,7 +25,7 @@ export const ChannelStrip: React.FC<ChannelStripProps> = ({
       <KnobPercentage label="send" theme="sky" />
       <KnobPercentage label="freq" theme="sky" />
       <KnobPercentage label="balance" theme="pink" />
-      <Grid columns="2" autoRows="none" justify="start" align="start" className="w-max" templateRows="none" gap={0}>
+      <Grid columns={2} autoRows="none" justify="start" align="start" className="w-max" templateRows="none" gap={0}>
         <Button variant="destructive" size="default" className="w-max">
           <span className="">
             {"A"}
@@ -53,33 +53,33 @@ export const ChannelStrip: React.FC<ChannelStripProps> = ({
 }
 
 // Registry definitions with immutable bindings
-export const demoComponentRegistry: ComponentRegistry = {
-  ChannelStrip: {
-    component: ChannelStrip,
-    schema: z.object({
-      name: z.string().default("A Strip"),
-      buttonCount: z.coerce.number().default(4),
-    }),
-    from: "app/platform/channel-strip",
-    defaultVariableBindings: [
-    ],
-  },
-  Knob: {
-    component: KnobPercentage,
-    schema: z.object({
-      label: z.string().default("some"),
-      theme: z
-        .enum([
-          "stone",
-          "pink",
-          "sky",
-          "green",
-        ])
-        .default("sky"),
-    }),
-    from: "app/platform/KnobPercentage",
-    defaultVariableBindings: [
-    ],
+// export const demoComponentRegistry: ComponentRegistry = {
+//   ChannelStrip: {
+//     component: ChannelStrip,
+//     schema: z.object({
+//       name: z.string().default("A Strip"),
+//       buttonCount: z.coerce.number().default(4),
+//     }),
+//     from: "app/platform/channel-strip",
+//     defaultVariableBindings: [
+//     ],
+//   },
+//   Knob: {
+//     component: KnobPercentage,
+//     schema: z.object({
+//       label: z.string().default("some"),
+//       theme: z
+//         .enum([
+//           "stone",
+//           "pink",
+//           "sky",
+//           "green",
+//         ])
+//         .default("sky"),
+//     }),
+//     from: "app/platform/KnobPercentage",
+//     defaultVariableBindings: [
+//     ],
 
-  }
-};
+//   }
+// };

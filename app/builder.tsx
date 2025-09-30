@@ -4,10 +4,9 @@ import React from "react";
 import UIBuilder from "@/components/ui/ui-builder";
 import { complexComponentDefinitions } from "@/lib/ui-builder/registry/complex-component-definitions";
 import { primitiveComponentDefinitions } from "@/lib/ui-builder/registry/primitive-component-definitions";
-import { demoComponentRegistry } from "./platform/channel-strip";
+import { customComponentRegistry } from "./platform/custom-repo";
 const initialLayers = [
   {
-
     id: "7",
     type: "div",
     name: "Panel",
@@ -75,7 +74,7 @@ const initialLayers = [
           componentRegistry={{
             ...complexComponentDefinitions,
             ...primitiveComponentDefinitions,
-            ...demoComponentRegistry
+            ...customComponentRegistry
           }}
         />
       );
